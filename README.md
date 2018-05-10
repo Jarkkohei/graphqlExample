@@ -22,24 +22,34 @@
 ## Graphiql usage
 
 
-### Get one user with id:
+### Get one user by id:
 ```js
 {
     user(id: "2") {
-        id,
-        firstName,
-        lastName,
-        age,
+        id
+        firstName
+        lastName
+        age
         hobbies
+        address {
+            street
+            apartment
+            city
+            zipCode
+            country
+        }
     }
 }
 ```
 
-### Get first name from all users:
+### Get first name and city from address for all users:
 ```js
 {
     users {
         firstName
+        address {
+            city
+        }
     }
 }
 ```
